@@ -1,0 +1,27 @@
+import { Component, OnInit } from '@angular/core';
+import { SuperUiLibComponent } from './super-ui-lib.component';
+import {SuperUiLibService} from './SuperUiLibService';
+import {HttpClient} from '@angular/common/http';
+
+@Component({
+  selector: '<%= dasherize(name) %>',
+  template: `<h1>Hier is your component from the library</h1>
+
+  <form action="">
+    <label for="">Your name</label><br>
+    <input type="text"> <br>
+    <label for="">Email</label><br>
+    <input type="email">
+    <button type="submit"> Submit</button>
+
+  </form>`
+
+})
+export class <%= classify(name) %>Component implements OnInit {
+
+  constructor(private superUIService : SuperUIService) { }
+  
+  ngOnInit(): void {
+  }
+
+}

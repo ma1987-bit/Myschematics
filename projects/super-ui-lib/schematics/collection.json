@@ -1,0 +1,37 @@
+{
+  "$schema": "../../../node_modules/@angular-devkit/schematics/collection-schema.json",
+  "schematics": {
+    "ng-add": {
+      "description": "Add Super UI Library to the project",
+      "factory": "./ng-add/index#ngAdd"
+    },
+    "super-ui-component": {
+      "description": "This schematic genrates super component",
+      "factory": "./super-ui-component/index#superUIComponent",
+      "schema": "./super-ui-component/schema.json",
+      "aliases": [
+        "suc"
+      ]
+    },
+    "realdolmen": {
+      "description": "with component.",
+      "factory": "./realdolmen/index#realdolmen",
+      "schema": "./realdolmen/schema.json"
+    },
+    "run-schematic": {
+      "description": "collection of schematics",
+      "factory": "./run-schematic/index#runSchematic",
+      "schema": "./run-schematic/schema.json"
+    },
+    "parentschematics": {
+      "description": "collection of schematics",
+      "factory": "./parentschematics/index#parentschematics",
+      "schema": "./parentschematics/schema.json"
+      
+    },
+    "childSchematic": {
+      "description": "A blank schematic.",
+      "factory": "./childSchematic/index#childSchematic"
+    }
+  }
+}

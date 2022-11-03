@@ -1,0 +1,30 @@
+{
+  "name": "super-ui-lib",
+  "version": "0.8.9",
+  "scripts": {
+    "build":"tsc -p tsconfig.schematics.json",
+    "postbuild": "copyfiles schematics/*/schema.json schematics/*/files/** schematics/collection.json ../../dist/super-ui-lib/"
+  },
+  "publishConfig": {
+    "registry": "http://localhost:4873/"
+  },
+  "schematics": "./schematics/collection.json",
+  "peerDependencies": {
+    "@angular/common": "^14.2.0",
+    "@angular/core": "^14.2.0",
+    "@angular/material": "^14.2.5"
+  
+  },
+  "ng-add":{
+    "save": "true"
+    },
+   
+  "dependencies": {
+    "tslib": "^2.3.0"
+    
+  },
+  "devDependencies": {
+    "copyfiles": "file:../../node_modules/copyfiles",
+    "typescript": "file:../../node_modules/typescript"
+  }
+}
