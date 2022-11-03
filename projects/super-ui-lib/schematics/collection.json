@@ -33,5 +33,13 @@
       "description": "A blank schematic.",
       "factory": "./childSchematic/index#childSchematic"
     }
+    ,
+    
+    "formcomponent": {
+      "description": "A blank schematic.",
+      "factory": "./formcomponent/index#formcomponent",
+      "schema": "./formcomponent/schema.json",
+      "aliases": ["f"]
+    }
   }
 }
