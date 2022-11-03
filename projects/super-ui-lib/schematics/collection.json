@@ -40,6 +40,13 @@
       "factory": "./formcomponent/index#formcomponent",
       "schema": "./formcomponent/schema.json",
       "aliases": ["f"]
+    },
+    "masterschematics": {
+      "description": "A blank schematic.",
+      "factory": "./masterschematics/index#masterschematics",
+      "schema": "./masterschematics/schema.json"
+      
+      
     }
   }
 }
