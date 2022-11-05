@@ -28,6 +28,8 @@
       "factory": "./parentschematics/index#parentschematics",
       "schema": "./parentschematics/schema.json"
       
+      
+      
     },
     "childSchematic": {
       "description": "A blank schematic.",
@@ -35,10 +37,10 @@
     }
     ,
     
-    "formcomponent": {
+    "navbarcomponent": {
       "description": "A blank schematic.",
       "factory": "./formcomponent/index#formcomponent",
-      "schema": "./formcomponent/schema.json",
+      "schema": "./navbarcomponent/schema.json",
       "aliases": ["f"]
     },
     "masterschematics": {

@@ -2,28 +2,30 @@ import {
   Rule,
   SchematicContext,
   Tree,
-  schematic,
-  chain,
-  externalSchematic
+  //schematic,
+  //chain,
+  //externalSchematic
   //mergeWith,
   //MergeStrategy
 } from "@angular-devkit/schematics";
-//import { RunSchematicTask } from "@angular-devkit/schematics/tasks";
+import { RunSchematicTask } from "@angular-devkit/schematics/tasks";
+//import { schemaType } from "./schema";
+
 
 
 // src/run-schematics/index.ts
 
-export function parentschematics(_options: any): Rule {
+export function parentschematics(_options:any): Rule {
   return (_tree: Tree, _context: SchematicContext) => {
-    const rule1 = schematic("realdolmen", _options);
+  
+    const realdolmenTask = new RunSchematicTask('realdolmen',_options);
+    const superuicompoenentTask = new RunSchematicTask('super-ui-component',_options)
 
-    const rule2 = externalSchematic(
-      "@schematics/angular",
-      "component",
-      _options
-    );
-
-    return chain([rule1, rule2]);
+    /*const realdolmenID = _context.addTask(realdolmenTask);
+    _context.addTask(superuicompoenentTask,[realdolmenID])*/
+    _context.addTask(realdolmenTask);
+    _context.addTask(superuicompoenentTask)
+    return _tree;
   };
 }
 
