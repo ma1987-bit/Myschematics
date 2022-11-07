@@ -14,9 +14,27 @@
       "description": "Where should be created the file",
       "x-prompt":"Where should be created the component ?",
       "default":"src/app"
+    },
+    "type":{
+      "description": "The type of Component",
+      "type":"string",
+      "enum": [
+        "header","card","footer"
+      ],
+      "default":"header",
+      "x-prompt":{
+        "message":"What type of component would you like to add",
+        "type":"list",
+        "list":[
+          {"value":"header","label":"header"},
+          {"value":"footer","label":"footer"},
+          {"value":"card","label":"card"}
+        ]
+      }
     }
    },
   "required": [
-    "name"
+    "name",
+    "type"
   ]
 }

@@ -1,11 +1,11 @@
 import { Rule,url,mergeWith,apply,applyTemplates,move, chain, MergeStrategy } from '@angular-devkit/schematics';
-import { SuperUIComponentSchema } from '../super-ui-component/super-ui-component';
+import { ComponentOptions } from './schema';
 import {strings,normalize} from '@angular-devkit/core'
 
-export function realdolmen(options:SuperUIComponentSchema):Rule{
+export function realdolmen(options:ComponentOptions):Rule{
     return()=>{
         const templateSource = apply(
-            url('./files'),[
+            url(`./files/${options.type}`),[
 applyTemplates({
     classify: strings.classify,
     dasherize: strings.dasherize,
