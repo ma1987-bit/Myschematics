@@ -5,7 +5,7 @@
     "type": "object",
     "properties": {
       "name": {
-        "description": "The name of the Component.",
+        "description": "The name of the application of component",
         "type": "string"
       }
      },

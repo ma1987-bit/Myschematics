@@ -9,19 +9,11 @@ export function realdolmen(options:ComponentOptions):Rule{
 applyTemplates({
     classify: strings.classify,
     dasherize: strings.dasherize,
-    name : options.name
+   name : options.name
 }),
 move(normalize(`/${options.path}/${strings.dasherize(options.name)}`))
             ]
         )
-    
-   /* return chain([
-       
-        externalSchematic(
-'@angular/material:navigation','navigation',options),
-mergeWith(templateSource,MergeStrategy.Overwrite)] 
-
- )*/
  
  return chain([mergeWith(templateSource, MergeStrategy.Overwrite)]);
 

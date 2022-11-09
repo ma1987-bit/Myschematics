@@ -19,12 +19,12 @@ export function parentschematics(_options:any): Rule {
   return (_tree: Tree, _context: SchematicContext) => {
   
     const realdolmenTask = new RunSchematicTask('realdolmen',_options);
-    const superuicompoenentTask = new RunSchematicTask('super-ui-component',_options)
+    const ApllicationTask = new RunSchematicTask('childSchematic',_options)
 
-    /*const realdolmenID = _context.addTask(realdolmenTask);
-    _context.addTask(superuicompoenentTask,[realdolmenID])*/
-    _context.addTask(realdolmenTask);
-    _context.addTask(superuicompoenentTask)
+    const ApplicationTaskID = _context.addTask(ApllicationTask);
+    _context.addTask(realdolmenTask,[ApplicationTaskID])
+   /* _context.addTask(realdolmenTask);
+    _context.addTask(superuicompoenentTask)*/
     return _tree;
   };
 }

@@ -11,6 +11,7 @@ import { RunSchematicTask } from "@angular-devkit/schematics/tasks";
 export function masterschematics(_options: any): Rule {
   return (_tree: Tree, _context: SchematicContext) => {
    const rule = schematic("childSchematic", _options)
+   
     _context.addTask(new RunSchematicTask("realdolmen", _options));
 
     return rule;
