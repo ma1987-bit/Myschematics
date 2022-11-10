@@ -1,5 +1,5 @@
 export interface ComponentOptions{
+   name:string;
     type:string;
-    name:string;
-    path:string
+    path:string;
 }

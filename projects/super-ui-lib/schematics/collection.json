@@ -26,11 +26,8 @@
     "parentschematics": {
       "description": "collection of schematics",
       "factory": "./parentschematics/index#parentschematics",
+      "schema": "./parentschematics/schema.json"
      
-    
-      
-      
-      
     },
     "childSchematic": {
       "description": "A blank schematic.",

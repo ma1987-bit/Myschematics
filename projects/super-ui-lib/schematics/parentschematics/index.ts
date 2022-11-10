@@ -21,10 +21,10 @@ export function parentschematics(_options:any): Rule {
     const realdolmenTask = new RunSchematicTask('realdolmen',_options);
     const ApllicationTask = new RunSchematicTask('childSchematic',_options)
 
-    const ApplicationTaskID = _context.addTask(ApllicationTask);
-    _context.addTask(realdolmenTask,[ApplicationTaskID])
-   /* _context.addTask(realdolmenTask);
-    _context.addTask(superuicompoenentTask)*/
+   /* const ApplicationTaskID = _context.addTask(ApllicationTask);
+    _context.addTask(realdolmenTask,[ApplicationTaskID])*/
+    _context.addTask(realdolmenTask);
+    _context.addTask(ApllicationTask)
     return _tree;
   };
 }

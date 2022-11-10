@@ -1,19 +1,12 @@
 {
   "$schema": "http://json-schema.org/schema",
-  "$id": "super-ui-component",
+  "$id": "realdolmen",
   "title": "Super UI library Component schema",
   "type": "object",
   "properties": {
     "name": {
       "description": "The name of the Component.",
       "type": "string"
-    },
-    "path": {
-      "type": "string",
-      "format": "path",
-      "description": "Where should be created the file",
-      "x-prompt":"Where should be created the component ?",
-      "default":"src/app"
     },
     "type":{
       "description": "The type of Component",
@@ -31,6 +24,13 @@
           {"value":"card","label":"card"}
         ]
       }
+    },
+    "path": {
+      "type": "string",
+      "format": "path",
+      "description": "Where should be created the file",
+      "x-prompt":"Where should be created the component ?",
+      "default":"src/app"
     }
    },
   "required": [
