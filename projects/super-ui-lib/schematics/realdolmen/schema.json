@@ -4,10 +4,6 @@
   "title": "Super UI library Component schema",
   "type": "object",
   "properties": {
-    "name": {
-      "description": "The name of the Component.",
-      "type": "string"
-    },
     "type":{
       "description": "The type of Component",
       "type":"string",
@@ -34,7 +30,8 @@
     }
    },
   "required": [
-    "name",
+    
     "type"
+   
   ]
 }
