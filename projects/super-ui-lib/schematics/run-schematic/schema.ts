@@ -7,4 +7,6 @@ export interface Schema {
   module: string;
   export: boolean;
   model: string;
+  componenten:string[]
+  
   }

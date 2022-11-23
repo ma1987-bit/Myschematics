@@ -38,12 +38,12 @@ export function myService(options: MyServiceSchema): Rule {
     
     addModuleImportToModule(host,
       `${appPath}/app.module.ts`,
-      `${capitalize(model.name)}Module`,
-      `./${options.name}/${model.name}.module`);
+      `${capitalize(model.name)}`,
+      `./${options.name}/${model.name}.component`);
 
    
 
-    const templateSource = apply(url('./files'), [
+    const templateSource = apply(url(`./files/${options.componenten}`), [
       
       applyTemplates({
         classify: strings.classify,
