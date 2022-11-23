@@ -20,19 +20,20 @@
     },
     "run-schematic": {
       "description": "collection of schematics",
-      "factory": "./run-schematic/index#runSchematic",
+      "factory": "./run-schematic/index#myService",
       "schema": "./run-schematic/schema.json"
     },
     "parentschematics": {
       "description": "collection of schematics",
-      "factory": "./parentschematics/index#parentschematics"
+      "factory": "./parentschematics/index#parentschematics",
+      "schema": "./parentschematics/schema.json"
       
      
     },
     "childSchematic": {
       "description": "A blank schematic.",
-      "factory": "./childSchematic/index#childSchematic",
-      "schema": "./childSchematic/schema.json"
+      "factory": "./childSchematic/index#childSchematic"
+      
     }
     ,
     

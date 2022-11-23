@@ -1,6 +1,6 @@
 {
-    "$schema": "http://json-schema.org/schema",
-    "$id": "childSchematic",
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "SchematicsAngularApp",
     "title": "Angular Application Options Schema",
     "type": "object",
     "description": "Generates a new basic application definition in the \"projects\" subfolder of the workspace.",
@@ -13,12 +13,8 @@
       "name": {
         "description": "The name of the new application.",
         "type": "string",
-        "pattern": "^(?:@[a-zA-Z0-9-*~][a-zA-Z0-9-*._~]*/)?[a-zA-Z0-9-~][a-zA-Z0-9-._~]*$",
-        "$default": {
-          "$source": "argv",
-          "index": 0
-        },
-        "x-prompt": "What name would you like to use for the application?"
+        "default":"DemoApplication"
+        
       },
       "inlineStyle": {
         "description": "Include styles inline in the root component.ts file. Only CSS styles can be included inline. Default is false, meaning that an external styles file is created and referenced in the root component.ts file.",
@@ -56,25 +52,7 @@
         "type": "string",
         "default": "css",
         "enum": ["css", "scss", "sass", "less"],
-        "x-prompt": {
-          "message": "Which stylesheet format would you like to use?",
-          "type": "list",
-          "items": [
-            { "value": "css", "label": "CSS" },
-            {
-              "value": "scss",
-              "label": "SCSS   [ https://sass-lang.com/documentation/syntax#scss                ]"
-            },
-            {
-              "value": "sass",
-              "label": "Sass   [ https://sass-lang.com/documentation/syntax#the-indented-syntax ]"
-            },
-            {
-              "value": "less",
-              "label": "Less   [ http://lesscss.org                                             ]"
-            }
-          ]
-        },
+        
         "x-user-analytics": "ep.ng_style"
       },
       "skipTests": {
@@ -104,6 +82,5 @@
         "default": true
       }
     },
-    "required": ["name"]
+    "required": []
   }
-  

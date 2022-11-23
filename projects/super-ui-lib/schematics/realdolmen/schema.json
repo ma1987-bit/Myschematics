@@ -14,12 +14,17 @@
       "x-prompt":{
         "message":"What type of component would you like to add",
         "type":"list",
+        "uniqueItems": true,
+      "minItems": 1,
         "list":[
           {"value":"header","label":"header"},
           {"value":"footer","label":"footer"},
           {"value":"card","label":"card"}
         ]
+        
+      
       }
+      
     },
     "path": {
       "type": "string",
@@ -30,8 +35,6 @@
     }
    },
   "required": [
-    
     "type"
-   
   ]
 }

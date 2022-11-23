@@ -9,22 +9,40 @@ import {
   //MergeStrategy
 } from "@angular-devkit/schematics";
 import { RunSchematicTask } from "@angular-devkit/schematics/tasks";
+import { parentschemaoption } from "./schema";
+
 //import { schemaType } from "./schema";
 
 
 
 // src/run-schematics/index.ts
 
-export function parentschematics(_options:any): Rule {
+export function parentschematics(_options:parentschemaoption): Rule {
+
   return (_tree: Tree, _context: SchematicContext) => {
-  
-    const realdolmenTask = new RunSchematicTask('realdolmen',_options);
+
+
+  // ik heb realdolmen schematics meerder geïnitialiseerd want met loops niet gelukt
+  const realdolmenTask = new RunSchematicTask('realdolmen',_options);
+  //const realdolmenTask1 = new RunSchematicTask('realdolmen',_options);
+  //const realdolmenTask2 = new RunSchematicTask('realdolmen',_options);
+    // deze child component die applicatie gaat genereren en wordt eerst uitgevoered
     const ApllicationTask = new RunSchematicTask('childSchematic',_options)
 
    /* const ApplicationTaskID = _context.addTask(ApllicationTask);
+   // als je op deze manier doet dan realdolmenTask depend op applicationTaskID dus deze wacht tot de applicatoin uitgevoered 
     _context.addTask(realdolmenTask,[ApplicationTaskID])*/
-    _context.addTask(realdolmenTask);
-    _context.addTask(ApllicationTask)
+   
+    //_context.addTask(realdolmenTask1);
+    //_context.addTask(realdolmenTask2);
+ 
+      _context.addTask(realdolmenTask);
+
+   
+      _context.addTask(ApllicationTask)
+    
+    
+   
     return _tree;
   };
 }

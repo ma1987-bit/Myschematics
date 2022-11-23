@@ -1,22 +1,28 @@
-{
+
+  {
     "$schema": "http://json-schema.org/schema",
-    "$id": "runSchematic",
-    "title": "Super UI library Component schema",
+    "$id": "SchematicsMyService",
+    "title": "My Service Schema",
     "type": "object",
     "properties": {
       "name": {
-        "description": "The name of the Component.",
+        "description": "The name of the component",
         "type": "string"
+       
       },
       "path": {
         "type": "string",
         "format": "path",
         "description": "Where should be created the file",
-        "x-prompt":"Where should be created the component ?",
         "default":"src/app"
+      },
+      "model": {
+        "type": "string",
+        "default": "model.json",
+        "description": "Model describing the component"
       }
-     },
-    "required": [
-      "name"
-    ]
+      
+     }
+   
   }
+  
