@@ -6,8 +6,6 @@ export interface Schema {
   project: string;
   module: string;
   export: boolean;
-  model: string;
-  componenten:string[]
-  
+  model: string
   
   }
