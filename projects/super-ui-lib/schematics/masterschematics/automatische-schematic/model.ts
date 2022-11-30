@@ -1,7 +1,5 @@
 export interface FileModel {
-    name:string;
     title: string;
-    entity:string;
     buttonName: string;
     text:string;
     nameJeans:string;

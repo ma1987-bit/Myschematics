@@ -1,0 +1,21 @@
+
+
+<h2 style="text-align:center"><%=model.title%></h2>
+
+<div class="container">
+<div class="card">
+  <img src="/w3images/jeans3.jpg" alt="Denim Jeans" style="width:100%">
+  <h1><%=model.nameJeans%></h1>
+  <p class="price">£19.99</p>
+  <p><%=model.text%></p>
+  <p><button><%=model.buttonName%></button></p>
+  </div>
+  <div class="card">
+  <img src="/w3images/jeans3.jpg" alt="Denim Jeans" style="width:100%">
+  <h1><%=model.nameJeans%></h1>
+  <p class="price">£19.99</p>
+  <p><%=model.text%></p>
+  <p><button><%=model.buttonName%></button></p>
+  </div>
+</div>
+

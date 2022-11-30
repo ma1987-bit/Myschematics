@@ -6,13 +6,13 @@ import {
 import * as JSON5 from 'json5';
 import { FileModel } from './model';
 import { getWorkspace } from '@schematics/angular/utility/workspace';
-import { capitalize } from '@angular-devkit/core/src/utils/strings';
+//import { capitalize } from '@angular-devkit/core/src/utils/strings';
 
 
 import { strings} from '@angular-devkit/core';
 
 import { Schema as MyServiceSchema } from './schema';
-import { addModuleImportToModule } from '@angular/cdk/schematics';
+//import { addModuleImportToModule } from '@angular/cdk/schematics';
 
 
 
@@ -36,10 +36,10 @@ export function myService(options: MyServiceSchema): Rule {
     const modelJson = modelBuffer.toString('utf-8');
     const model = JSON5.parse(modelJson) as FileModel;
     
-    addModuleImportToModule(host,
+    /*addModuleImportToModule(host,
       `${appPath}/app.module.ts`,
-      `${capitalize(model.entity)}Module`,
-      `./${options.name}/${model.entity}.module`);
+      `${capitalize(model.name)}`,
+      `./${options.name}/${model.name}.component`);*/
 
     const templateSource = apply(url('./files'), [
       applyTemplates({

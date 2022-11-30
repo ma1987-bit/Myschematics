@@ -52,6 +52,11 @@
       "description": "A blank schematic.",
       "factory": "./automatische-schematic/index#myService",
       "schema": "./automatische-schematic/schema.json"
+    },
+    "componentOptions": {
+      "description": "A blank schematic.",
+      "factory": "./componentOptions/index#myService",
+      "schema": "./componentOptions/schema.json"
     }
   }
 }
