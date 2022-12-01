@@ -38,8 +38,8 @@ export function myService(options: MyServiceSchema): Rule {
     
     addModuleImportToModule(host,
       `${appPath}/app.module.ts`,
-      `${capitalize(model.entity)}Module`,
-      `./${options.name}/${model.entity}.module`);
+      `${capitalize(options.name)}Module`,
+      `./${options.name}/${options.name}.module`);
 
     const templateSource = apply(url('./files'), [
       applyTemplates({

@@ -10,8 +10,8 @@ export interface FileModel {
   }
   export interface Menu {
     home: string;
-    contact: string
-    about: string;
+    about: string
+    
     
   }
 

@@ -1,6 +1,6 @@
 {
   "name": "super-ui-lib",
-  "version": "1.0.76",
+  "version": "1.0.79",
   "scripts": {
     "build":"tsc -p tsconfig.schematics.json",
     "build:watch": "tsc -p tsconfig.schematics.json --watch", 

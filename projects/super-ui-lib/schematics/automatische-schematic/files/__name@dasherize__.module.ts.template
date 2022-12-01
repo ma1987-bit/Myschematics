@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { <%= classify(name) %>Navbar } from './navbar/<%=dasherize(name)%>-navbar.component';
 import { <%= classify(name) %>Card } from './card/<%=dasherize(name)%>-card.component';
+import {<%= classify(name) %>About } from './about/<%=dasherize(name)%>-about.component';
 import { <%= classify(name) %>Service } from './<%=dasherize(name)%>.service';
 import { <%= name.toUpperCase() %>_ROUTES } from './<%=dasherize(name)%>.routes';
 
@@ -15,10 +16,12 @@ import { <%= name.toUpperCase() %>_ROUTES } from './<%=dasherize(name)%>.routes'
   ],
   declarations: [
     <%= classify(name) %>Navbar,
-    <%= classify(name) %>Card
+    <%= classify(name) %>Card,
+    <%= classify(name) %>About 
+
   ],
   providers: [<%= classify(name) %>Service],
   exports: [<%= classify(name) %>Navbar,
-    <%= classify(name) %>Card]
+    <%= classify(name) %>Card,<%= classify(name) %>About ]
 })
 export class <%= classify(name) %>Module { }

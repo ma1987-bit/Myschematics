@@ -40,6 +40,7 @@ export function myService(options: MyServiceSchema): Rule {
       `${appPath}/app.module.ts`,
       `${capitalize(model.name)}`,
       `./${options.name}/${model.name}.component`);
+   
 
     const templateSource = apply(url(`./files/${options.componenten}`), [
       applyTemplates({
