@@ -15,21 +15,21 @@
   <h1><%=model.nameJeans%></h1>
   <p class="price">£20.60</p>
   <p><%=model.text%></p>
-  <p><button><%=model.buttonName%></button></p>
+  <p><button><%=model.ButtonName%></button></p>
   </div>
   <div class="card">
   <img src="<%=model.picture3%>" alt="Denim Jeans" style="width:100%">
   <h1><%=model.nameJeans%></h1>
   <p class="price">£100.99</p>
   <p><%=model.text%></p>
-  <p><button><%=model.buttonName%></button></p>
+  <p><button><%=model.ButtonName%></button></p>
   </div>
   <div class="card">
   <img src="<%=model.picture4%>" alt="Denim Jeans" style="width:100%">
   <h1><%=model.nameJeans%></h1>
   <p class="price">£40.99</p>
   <p><%=model.text%></p>
-  <p><button><%=model.buttonName%></button></p>
+  <p><button><%=model.ButtonName%></button></p>
   </div>
 </div>
 
