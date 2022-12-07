@@ -4,28 +4,28 @@
 
 <div class="container">
 <div class="card">
-  <img src="https://cdn.pixabay.com/photo/2017/08/08/00/23/woman-2609573__340.jpg" alt="Denim Jeans" style="width:100%">
-  <h1><%=model.nameJeans%></h1>
+  <img src="<%=model.picture1%>" alt="Denim Jeans" style="width:100%">
+  <h1><%=model.JeansName%></h1>
   <p class="price">£19.99</p>
   <p><%=model.text%></p>
-  <p><button><%=model.buttonName%></button></p>
+  <p><button><%=model.ButtonName%></button></p>
   </div>
   <div class="card">
-  <img src="https://cdn.pixabay.com/photo/2017/08/06/10/18/couch-2590993__340.jpg" alt="Denim Jeans" style="width:100%">
+  <img src="<%=model.picture2%>" alt="Denim Jeans" style="width:100%">
   <h1><%=model.nameJeans%></h1>
   <p class="price">£20.60</p>
   <p><%=model.text%></p>
   <p><button><%=model.buttonName%></button></p>
   </div>
   <div class="card">
-  <img src="https://cdn.pixabay.com/photo/2014/05/21/14/54/feet-349687__340.jpg" alt="Denim Jeans" style="width:100%">
+  <img src="<%=model.picture3%>" alt="Denim Jeans" style="width:100%">
   <h1><%=model.nameJeans%></h1>
   <p class="price">£100.99</p>
   <p><%=model.text%></p>
   <p><button><%=model.buttonName%></button></p>
   </div>
   <div class="card">
-  <img src="https://cdn.pixabay.com/photo/2020/07/11/16/16/jeans-5394561__340.jpg" alt="Denim Jeans" style="width:100%">
+  <img src="<%=model.picture4%>" alt="Denim Jeans" style="width:100%">
   <h1><%=model.nameJeans%></h1>
   <p class="price">£40.99</p>
   <p><%=model.text%></p>

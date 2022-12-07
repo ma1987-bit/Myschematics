@@ -2,10 +2,14 @@ export interface FileModel {
     name:string;
     title: string;
     entity:string;
-    buttonName: string;
+    ButtonName: string;
     text:string;
-    nameJeans:string;
+    JeansName:string;
     menuItem :Menu[];
+    picture1:string,
+    picture2:string,
+    picture3:string,
+    picture4:string
     
   }
   export interface Menu {

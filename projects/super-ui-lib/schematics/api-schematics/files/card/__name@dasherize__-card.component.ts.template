@@ -1,0 +1,20 @@
+import { Component,OnInit } from '@angular/core';
+import { <%= classify(name) %>Service } from '../<%=dasherize(name)%>.service';
+
+
+
+@Component({
+  selector: '<%= dasherize(name)%>card',
+  templateUrl: './<%= dasherize(name) %>-card.component.html',
+  styleUrls: ['./<%= dasherize(name) %>-card.component.css']
+})
+export class <%= classify(name) %>Card implements OnInit  {
+  
+  constructor(private <%=dasherize(name)%>Service: <%= classify(name) %>Service) {}
+  fackstore:any
+  ngOnInit():void{}
+this.<%=dasherize(name)%>Service.getData().subscribe((data: any)=>{
+  this.fackstore = data;
+});
+    
+}

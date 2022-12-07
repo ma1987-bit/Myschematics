@@ -1,0 +1,16 @@
+
+
+<h2 style="text-align:center"><%=model.title%></h2>
+
+<div class="container">
+<div class="card" *ngFor="let field of fields">
+
+  <img src={{field.image}}>
+  <h1>{{field.title}}</h1>
+  <p class="price">{{field.price}}</p>
+  <p>{{field.description}}</p>
+  <p><button><%=model.buttonName%></button></p>
+ 
+  </div>
+</div>
+
