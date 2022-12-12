@@ -21,10 +21,7 @@
     "path": {
       "type": "string",
       "format": "path",
-      "$default": {
-        "$source": "workingDirectory"
-      },
-      "description": "The path at which to create the component file, relative to the current workspace. Default is a folder with the same name as the component in the project root.",
+      "description": "The path to create the component.",
       "visible": false
     },
     "appRoot": {
@@ -48,10 +45,10 @@
     "model": {
       "type": "string",
       "default": "model.json",
-      "description": "Model describing the api"
+      "description": "Model describing the crud form"
     }
     
     
    }
-
+ 
 }

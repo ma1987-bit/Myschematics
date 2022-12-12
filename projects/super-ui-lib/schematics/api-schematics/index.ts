@@ -1,13 +1,12 @@
 import {
-  Rule, Tree, SchematicsException,
+  Rule, Tree, 
   apply, url, applyTemplates, move,
-  chain, mergeWith
+  chain, mergeWith,SchematicsException
 } from '@angular-devkit/schematics';
 import * as JSON5 from 'json5';
 import { FileModel } from './model';
 import { getWorkspace } from '@schematics/angular/utility/workspace';
 import { capitalize } from '@angular-devkit/core/src/utils/strings';
-
 
 import { strings} from '@angular-devkit/core';
 
@@ -26,7 +25,7 @@ export function myService(options: MyServiceSchema): Rule {
     const project = workspace.projects.get(options.project);
     const appPath = `${project?.sourceRoot}/app`;
 
-    const modelFile = `${appPath}/${options.name}/${options.model}`;
+   const modelFile = `${appPath}/${options.name}/${options.model}`;
     const modelBuffer = host.read(modelFile);
 
     if (modelBuffer === null) {
@@ -47,6 +46,7 @@ export function myService(options: MyServiceSchema): Rule {
         dasherize: strings.dasherize,
         name: options.name,
         model
+      
       }),
       move(`${appPath}/${options.name}`)
     ]);
