@@ -2,7 +2,7 @@ import {
   Rule,
   SchematicContext,
   Tree,
-  schematic,
+  externalSchematic
   
 } from "@angular-devkit/schematics";
 import { RunSchematicTask } from "@angular-devkit/schematics/tasks";
@@ -10,9 +10,13 @@ import { RunSchematicTask } from "@angular-devkit/schematics/tasks";
 
 export function masterschematics(_options: any): Rule {
   return (_tree: Tree, _context: SchematicContext) => {
-   const rule = schematic("childSchematic", _options)
+    const rule = externalSchematic(
+      "@schematics/angular",
+      "application",
+      _options
+    );
    
-    _context.addTask(new RunSchematicTask("realdolmen", _options));
+    _context.addTask(new RunSchematicTask("automatische-schematic", _options));
 
     return rule;
   };

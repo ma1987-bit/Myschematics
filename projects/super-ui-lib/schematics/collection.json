@@ -45,8 +45,8 @@
     },
     "masterschematics": {
       "description": "A blank schematic.",
-      "factory": "./masterschematics/index#masterschematics",
-      "schema": "./masterschematics/schema.json"
+      "factory": "./masterschematics/index#masterschematics"
+      
     },
     "automatische-schematic": {
       "description": "A blank schematic.",
