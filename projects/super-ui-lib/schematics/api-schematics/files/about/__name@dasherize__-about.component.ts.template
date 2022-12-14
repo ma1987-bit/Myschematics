@@ -1,26 +1,12 @@
-import {Component,OnInit} from '@angular/core';
-import { <%= classify(name) %>Service } from './<%=dasherize(name)%>.service';
+import {Component} from '@angular/core';
 
-export interface ApiOptions {
-  id: number;
-  title:string,
-  price:number,
-  description:string,
-  image:string
-}
 
 
 @Component({
-  selector: '<%= dasherize(name)%>about',
+  selector: '<%= dasherize(name)%>table',
   styleUrls: ['./<%= dasherize(name) %>-about.component.css'],
   templateUrl: './<%= dasherize(name) %>-about.component.html',
 })
-export class  <%= classify(name) %>About implements OnInit {
- public fields:ApiOptions[] = [];
-  constructor(private <%= dasherize(name) %>service :<%= classify(name) %>Service){}
-
-  ngOnInit(): void{
-   this.<%= dasherize(name)%>service.getFakedata().subscribe((data:ApiOptions[])=> this.fields = data);
-  }
+export class  <%= classify(name) %>About {
   
 }

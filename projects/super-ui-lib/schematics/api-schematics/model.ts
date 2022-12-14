@@ -3,6 +3,7 @@ export interface FileModel {
   entity: string;
   api: CrudEndpoints;
   fields: Field[];
+  menuItem :Menu[];
   ButtonName:string;
 }
 
@@ -18,4 +19,11 @@ export interface Field {
   description:string,
   image:string
 }
+export interface Menu {
+ 
+  fakestore: string
+  about: string;
+  
+}
+
   

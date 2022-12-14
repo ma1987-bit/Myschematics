@@ -1,0 +1,15 @@
+import { Routes } from '@angular/router';
+import {<%= classify(name) %>About } from './about/<%=dasherize(name)%>-about.component';
+import {<%= classify(name) %>Fakestore } from './fakestore/<%=dasherize(name)%>-fakestore.component';
+
+export const <%=name.toUpperCase()%>_ROUTES: Routes = [
+  {
+    path: '<%=dasherize(name)%>fakestore',
+    component: <%= classify(name) %>Fakestore
+  },
+  {
+    path: '<%=dasherize(name)%>about',
+    component: <%= classify(name) %>About
+  }
+  
+];

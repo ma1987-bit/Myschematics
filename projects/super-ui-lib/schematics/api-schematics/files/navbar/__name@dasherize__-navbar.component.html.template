@@ -1,0 +1,9 @@
+
+<% for (let menu of model.menuItem) { %>
+<ul>
+  <li><a routerLink="<%=dasherize(name)%>fakestore"><%=menu.fakestore%></a></li>
+  <li><a routerLink="<%=dasherize(name)%>about"><%=menu.about%></a></li>
+ 
+</ul>
+ <% } %>
+

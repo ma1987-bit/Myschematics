@@ -21,7 +21,7 @@ move(normalize(`/${options.path}/${strings.dasherize(options.name)}`))
     
     return chain([
        
-        externalSchematic(
+ externalSchematic(
 '@schematics/angular','component',options),
 mergeWith(templateSource,MergeStrategy.Overwrite)],
 
