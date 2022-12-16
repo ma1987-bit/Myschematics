@@ -2,23 +2,27 @@ import {
   Rule,
   SchematicContext,
   Tree,
-  externalSchematic
+  schematic,
+  chain
   
 } from "@angular-devkit/schematics";
-import { RunSchematicTask } from "@angular-devkit/schematics/tasks";
+import { AppSchema } from "./schema";
 
-
-export function masterschematics(_options: any): Rule {
+export function masterschematics(_options: AppSchema): Rule {
   return (_tree: Tree, _context: SchematicContext) => {
-    const rule = externalSchematic(
-      "@schematics/angular",
-      "application",
-      _options
-    );
-   
-    _context.addTask(new RunSchematicTask("automatische-schematic", _options));
 
-    return rule;
+
+    const rule1 = schematic("automatische-schematic", _options);
+    const rule2 = schematic("api-schematics", _options)
+    const rules = [rule1,rule2]
+    if(_options.app === "fakestore") { 
+      return chain([rule1])
+    }
+if(_options.app === "Shop-App"){
+  return chain([rule2])
+}
+else
+    return chain(rules);
   };
 }
 

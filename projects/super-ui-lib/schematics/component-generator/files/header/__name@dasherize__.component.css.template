@@ -1,0 +1,4 @@
+.container{
+    background-color: black;
+    color: rgb(165, 42, 130);
+}

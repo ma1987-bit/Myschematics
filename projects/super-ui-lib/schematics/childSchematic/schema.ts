@@ -1,9 +1,8 @@
-export interface Schema {
-    name: string;
-    path: string;
-    project: string;
-    module: string;
-    export: boolean;
-    model: string;
-    }
-
+export interface ComponentOptions{
+    name:string;
+     type:string;
+     path:string;
+     project:string;
+     enum:string;
+     multiselect:Array<string>
+ }

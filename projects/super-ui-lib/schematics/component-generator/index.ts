@@ -10,7 +10,7 @@ import {
 } from '@angular-devkit/schematics';
 import { ComponentOptions } from './schema';
 import { strings, normalize } from '@angular-devkit/core';
-export function realdolmen(options: ComponentOptions): Rule {
+export function ComponentGenerator(options: ComponentOptions): Rule {
   return () => {
 
     // hier create the template that comes from the files folder under this schematics 
@@ -24,7 +24,7 @@ export function realdolmen(options: ComponentOptions): Rule {
 // the template will move to this path and it will take us name the name of type example(header,footer,card)
       move(normalize(`/${options.path}/${strings.dasherize(options.type)}`)),
     ]);
-// hier it will overwrite the above template the files
+// over write the template file
     return chain([mergeWith(templateSource, MergeStrategy.Overwrite)]);
   };
 }

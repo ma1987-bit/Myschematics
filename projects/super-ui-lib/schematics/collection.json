@@ -13,10 +13,10 @@
         "suc"
       ]
     },
-    "realdolmen": {
+    "component-generator": {
       "description": "with component.",
-      "factory": "./realdolmen/index#realdolmen",
-      "schema": "./realdolmen/schema.json"
+      "factory": "./component-generator/index#ComponentGenerator",
+      "schema": "./component-generator/schema.json"
     },
     "run-schematic": {
       "description": "collection of schematics",
@@ -32,7 +32,9 @@
     },
     "childSchematic": {
       "description": "A blank schematic.",
-      "factory": "./childSchematic/index#childSchematic"
+      "factory": "./childSchematic/index#childSchematic",
+      "schema": "./childSchematic/schema.json"
+
       
     }
     ,
@@ -45,7 +47,8 @@
     },
     "masterschematics": {
       "description": "A blank schematic.",
-      "factory": "./masterschematics/index#masterschematics"
+      "factory": "./masterschematics/index#masterschematics",
+      "schema": "./masterschematics/schema.json"
       
     },
     "automatische-schematic": {

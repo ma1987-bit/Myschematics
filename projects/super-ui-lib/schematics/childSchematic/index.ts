@@ -1,48 +1,30 @@
-
 import {
-SchematicsException,
+  Rule,
+  url,
+  mergeWith,
+  apply,
+  applyTemplates,
+  move,
+  chain,
+  MergeStrategy,
 } from '@angular-devkit/schematics';
-import * as JSON5 from 'json5';
-import { getWorkspace } from '@schematics/angular/utility/workspace';
-import { capitalize } from '@angular-devkit/core/src/utils/strings';
+import { ComponentOptions } from './schema';
+import { strings, normalize } from '@angular-devkit/core';
+export function childSchematic(options: ComponentOptions): Rule {
+  return () => {
 
-
-import { addModuleImportToModule } from '@angular/cdk/schematics';
-
-import { Rule,Tree,externalSchematic} from '@angular-devkit/schematics';
-import { Schema as MyServiceSchema } from './schema';
-import { MuiFile } from './model';
-
-export function childSchematic(options: MyServiceSchema): Rule {
-  return async (host: Tree) => {
-    const workspace = await getWorkspace(host);
-    if (!options.project) {
-      options.project = workspace.projects.keys().next().value;
-    }
-    const project = workspace.projects.get(options.project);
-    const appPath = `${project?.sourceRoot}/app`;
-
-    const modelFile = `${appPath}/${options.name}/${options.model}`;
-    const modelBuffer = host.read(modelFile);
-
-    if (modelBuffer === null) {
-      throw new SchematicsException(`Model file ${options.name} does not exist.`);
-    }
-
-    const modelJson = modelBuffer.toString('utf-8');
-    const model = JSON5.parse(modelJson) as MuiFile;
-    
-    addModuleImportToModule(host,
-      `${appPath}/app.module.ts`,
-      `${capitalize(model.name)}`,
-      `./${options.name}/${model.name}.component`);
-
-    const rule = externalSchematic(
-      "@angular/material",
-      "navigation",
-      options,
-    );
-    
-    return rule;
+    // hier create the template that comes from the files folder under this schematics 
+    const templateSource = apply(url(`./files/${options.type}`), [
+      applyTemplates({
+        classify: strings.classify,
+        dasherize: strings.dasherize,
+        name: options.type,
+      }),
+      
+// the template will move to this path and it will take us name the name of type example(header,footer,card)
+      move(normalize(`/${options.path}/${strings.dasherize(options.type)}`)),
+    ]);
+// hier it will overwrite the above template the files
+    return chain([mergeWith(templateSource, MergeStrategy.Overwrite)]);
   };
 }

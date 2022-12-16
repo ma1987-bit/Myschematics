@@ -1,57 +1,61 @@
 {
   "$schema": "http://json-schema.org/schema",
-  "$id": "SchematicsMyService",
-  "title": "My Service Schema",
+  "id": "MyDemoSchema",
+  "title": "My Demo Schematics Schema",
   "type": "object",
   "properties": {
-    "name": {
-      "type": "string",
-      "$default": {
-        "$source": "argv",
-        "index": 0
-      }
-    },
-    "project": {
-      "type": "string",
-      "description": "The name of the project.",
-      "$default": {
-        "$source": "projectName"
-      }
-    },
-    "path": {
-      "type": "string",
-      "format": "path",
-      "description": "The path to create the component.",
-      "$default": {
-        "$source": "workingDirectory"
-       },
-      "visible": false
-    },
-    "appRoot": {
-      "type": "string"
-    },
-    "sourceDir": {
-      "type": "string",
-      "default": "src"
-    },
-
-    "module":  {
-      "type": "string",
-      "description": "The declaring module.",
-      "alias": "m"
-    },
-    "export": {
-      "type": "boolean",
-      "default": false,
-      "description": "Export component from module?"
-    },
-    "model": {
-      "type": "string",
-      "default": "model.json",
-      "description": "Model describing the crud form"
+    "type": {
+      "enum": [
+        "header",
+        "footer",
+        "none"
+      ],
+      "x-prompt": "Which component would you like to use?"
     }
-    
-    
-   }
- 
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": { "type": { "const": "header" } }
+      },
+      "then": {
+        "properties": { "header": { 
+          "path": {
+            "type": "string",
+            "format": "path",
+            "description": "Where should be created the file",
+            "x-prompt":"Where should be created the component ?",
+            "default":"src/app"
+          }
+          
+
+           } }
+      }
+    },
+    {
+      "if": {
+        "properties": { "type": { "const": "footer" } }
+      
+      },
+      "then": {
+        "properties": { "footer": { "path": {
+          "type": "string",
+          "format": "path",
+          "description": "Where should be created the file",
+          "x-prompt":"Where should be created the component ?",
+          "default":"src/app"
+        }} }
+      }
+    },
+    {
+      "if": {
+        "properties": { "type": { "const": "none" } }
+       
+      },
+      "then": {
+        "properties": { "none": { 
+          "Message": "Thanks for using our components" } }
+      }
+    }
+  ]
 }
