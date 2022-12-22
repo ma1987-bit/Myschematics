@@ -1,29 +1,58 @@
-import { Rule,url,mergeWith,apply,applyTemplates,move, chain, MergeStrategy } from '@angular-devkit/schematics';
-import { SuperUIComponentSchema } from '../super-ui-component/super-ui-component';
-import {strings,normalize} from '@angular-devkit/core'
+import {
+  Rule, Tree, SchematicsException,
+  apply, url, applyTemplates, move,
+  chain, mergeWith
+} from '@angular-devkit/schematics';
+import * as JSON5 from 'json5';
+import { FileModel } from './model';
+import { getWorkspace } from '@schematics/angular/utility/workspace';
+import { capitalize } from '@angular-devkit/core/src/utils/strings';
 
-export function formcomponent(options:SuperUIComponentSchema):Rule{
-    return()=>{
-        const templateSource = apply(
-            url('./files'),[
-applyTemplates({
-    classify: strings.classify,
-    dasherize: strings.dasherize,
-    name : options.name
-}),
-move(normalize(`/${options.path}/${strings.dasherize(options.name)}`))
-            ]
-        )
+
+import { strings} from '@angular-devkit/core';
+
+import { Schema as MyServiceSchema } from './schema';
+import { addModuleImportToModule } from '@angular/cdk/schematics';
+
+
+
+
+export function myService(options: MyServiceSchema): Rule {
+  return async (host: Tree) => {
+    const workspace = await getWorkspace(host);
+    if (!options.project) {
+      options.project = workspace.projects.keys().next().value;
+    }
+    const project = workspace.projects.get(options.project);
+    const appPath = `${project?.sourceRoot}/app`;
+
+    const modelFile = `${appPath}/${options.name}/${options.model}`;
+    const modelBuffer = host.read(modelFile);
+
+    if (modelBuffer === null) {
+      throw new SchematicsException(`Model file ${options.name} does not exist.`);
+    }
+
+    const modelJson = modelBuffer.toString('utf-8');
+    const model = JSON5.parse(modelJson) as FileModel;
     
-   /* return chain([
-       
-        externalSchematic(
-'@angular/material:navigation','navigation',options),
-mergeWith(templateSource,MergeStrategy.Overwrite)] 
+    addModuleImportToModule(host,
+      `${appPath}/app.module.ts`,
+      `${capitalize(options.name)}Module`,
+      `./${options.name}/${options.name}.module`);
 
- )*/
- 
- return chain([mergeWith(templateSource, MergeStrategy.Overwrite)]);
+    const templateSource = apply(url('./files'), [
+      applyTemplates({
+        classify: strings.classify,
+        dasherize: strings.dasherize,
+        name: options.name,
+        model
+      }),
+      move(`${appPath}/${options.name}`)
+    ]);
 
-}
+    return chain([
+      mergeWith(templateSource)
+    ]);
+  };
 }

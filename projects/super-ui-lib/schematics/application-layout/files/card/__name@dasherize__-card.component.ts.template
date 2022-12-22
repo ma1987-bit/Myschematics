@@ -3,11 +3,11 @@ import { Component } from '@angular/core';
 
 
 @Component({
-  selector: '<%= dasherize(name)%>navbar',
+  selector: '<%= dasherize(name)%>card',
   templateUrl: './<%= dasherize(name) %>-card.component.html',
   styleUrls: ['./<%= dasherize(name) %>-card.component.css']
 })
-export class <%= classify(name) %>Card {
+export class <%= classify(name) %>Card  {
   
   constructor() {}
   

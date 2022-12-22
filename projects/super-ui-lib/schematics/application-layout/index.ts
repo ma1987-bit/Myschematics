@@ -36,10 +36,10 @@ export function myService(options: MyServiceSchema): Rule {
     const modelJson = modelBuffer.toString('utf-8');
     const model = JSON5.parse(modelJson) as FileModel;
     
- addModuleImportToModule(host,
+    addModuleImportToModule(host,
       `${appPath}/app.module.ts`,
-      `${capitalize(model.entity)}`,
-      `./${options.name}/${model.entity}.component`);
+      `${capitalize(options.name)}Module`,
+      `./${options.name}/${options.name}.module`);
 
     const templateSource = apply(url('./files'), [
       applyTemplates({

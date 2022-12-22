@@ -20,7 +20,7 @@ export function ComponentGenerator(options: ComponentOptions): Rule {
         dasherize: strings.dasherize,
         name: options.type,
       }),
-      
+
 // the template will move to this path and it will take us name the name of type example(header,footer,card)
       move(normalize(`/${options.path}/${strings.dasherize(options.type)}`)),
     ]);

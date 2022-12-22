@@ -4,18 +4,13 @@
     "title": "Super UI library Component schema",
     "type": "object",
     "properties": {
-        "name": {
-            "description": "The name of the model.",
-            "type": "string",
-            "x-prompt":"Can you please add the name of model or appllication ?"
-          },
       "app":{
         "description": "The name of the application to generate",
         "type":"string",
         "enum": [
-            "fakestore","Shop-App"
+            "predefined","defaultApp"
           ],
-          "default":"header",
+          "default":"defaultApp",
     
           "x-prompt":{
             "message":"What type of application would you like to add",
@@ -23,8 +18,8 @@
             "uniqueItems": true,
           "minItems": 1,
             "list":[
-              {"value":"api-application","label":"Api-App"},
-              {"value":"shop","label":"Shop-App"}
+              {"value":"predefined","label":"predefined"},
+              {"value":"defaultapp","label":"defaultApp"}
           
               
             ]

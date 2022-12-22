@@ -1,9 +1,0 @@
-
-<% for (let menu of model.menuItem) { %>
-<ul>
-  <li><a href="#home"><%=menu.home%></a></li>
-  <li><a href="#contact"><%=menu.contact%></a></li>
-  <li><a href="#about"><%=menu.about%></a></li>
-</ul>
- <% } %>
-

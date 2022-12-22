@@ -1,0 +1,10 @@
+{
+    "schematics": {
+      "migration-04": {
+        "version": "4.0.0",
+        "description": "Updates super-ui-lib from v3.1.0 to v4.0.0",
+        "factory": "./update-4"
+      }
+    }
+  }
+  

@@ -51,23 +51,28 @@
       "schema": "./masterschematics/schema.json"
       
     },
-    "automatische-schematic": {
-      "description": "A blank schematic.",
-      "factory": "./automatische-schematic/index#myService",
-      "schema": "./automatische-schematic/schema.json"
+    "shop-schematic": {
+      "description": "Data come from model file",
+      "factory": "./shop-schematic/index#myService",
+      "schema": "./shop-schematic/schema.json"
     },
-    "componentOptions": {
+    "defaultapp": {
       "description": "A blank schematic.",
-      "factory": "./componentOptions/index#myService",
-      "schema": "./componentOptions/schema.json"
+      "factory": "./defaultapp/index#DefaultApp",
+      "schema": "./defaultapp/schema.json"
     },
-    "api-schematics": {
-      "description": "A blank schematic.",
-      "factory": "./api-schematics/index#myService",
-      "schema": "./api-schematics/schema.json"
+    "fakestore-api-schematics": {
+      "description": "application come from fakestore api",
+      "factory": "./fakestore-api-schematics/index#myService",
+      "schema": "./fakestore-api-schematics/schema.json"
+    },
+    "application-layout": {
+      "description": "creating application foundation",
+      "factory": "./application-layout/index#myService",
+      "schema": "./application-layout/schema.json"
     },
     "angular-schematics": {
-      "description": "A blank schematic.",
+      "description": "creating default application",
       "factory": "./angular-schematics/index#default_1",
       "schema": "./angular-schematics/schema.json"
     }
