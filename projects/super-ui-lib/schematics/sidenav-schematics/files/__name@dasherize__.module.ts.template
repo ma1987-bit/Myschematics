@@ -2,9 +2,10 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+import {MatMenuModule} from '@angular/material/menu';
 import { <%= classify(name) %>Navbar } from './navbar/<%=dasherize(name)%>-navbar.component';
-import { <%= classify(name) %>Card } from './card/<%=dasherize(name)%>-card.component';
-import { <%= classify(name) %>Sidebar } from './sidebar/<%=dasherize(name)%>-sidebar.component';
+import {<%= classify(name) %>About } from './about/<%=dasherize(name)%>-about.component';
+import {<%= classify(name) %>Fakestore } from './fakestore/<%=dasherize(name)%>-fakestore.component';
 import { <%= classify(name) %>Service } from './<%=dasherize(name)%>.service';
 import { <%= name.toUpperCase() %>_ROUTES } from './<%=dasherize(name)%>.routes';
 
@@ -12,18 +13,17 @@ import { <%= name.toUpperCase() %>_ROUTES } from './<%=dasherize(name)%>.routes'
   imports: [
     CommonModule,
     FormsModule,
-    RouterModule.forChild(<%= name.toUpperCase() %>_ROUTES)
+    RouterModule.forChild(<%= name.toUpperCase() %>_ROUTES),
+    MatMenuModule
   ],
   declarations: [
     <%= classify(name) %>Navbar,
-    <%= classify(name) %>Card,
-    <%= classify(name) %>Sidebar
-    
-    
+    <%= classify(name) %>About ,
+    <%= classify(name) %>Fakestore 
 
   ],
   providers: [<%= classify(name) %>Service],
   exports: [<%= classify(name) %>Navbar,
-    <%= classify(name) %>Card,<%= classify(name) %>Sidebar
+  <%= classify(name) %>About,<%= classify(name) %>Fakestore  ]
 })
 export class <%= classify(name) %>Module { }

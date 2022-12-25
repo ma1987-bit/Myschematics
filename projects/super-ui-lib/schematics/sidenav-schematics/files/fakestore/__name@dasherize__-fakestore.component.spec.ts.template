@@ -2,16 +2,16 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { FormsModule } from '@angular/forms';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { RouterTestingModule } from '@angular/router/testing';
-import { <%=classify(name)%>Home } from './<%=dasherize(name)%>-home.component';
-import { <%=classify(name)%>Service } from '../<%=dasherize(name)%>.service';
+import { <%=classify(name)%>Fakestore } from './<%=dasherize(name)%>-fakestore.component';
+import { <%=classify(name)%>Service } from './<%=dasherize(name)%>.service';
 
-describe('<%=classify(name)%>Home', () => {
-  let component: <%=classify(name)%>Home;
-  let fixture: ComponentFixture<<%=classify(name)%>Home>;
+describe('<%=classify(name)%>Fakestore', () => {
+  let component: <%=classify(name)%>Fakestore;
+  let fixture: ComponentFixture<<%=classify(name)%>Fakestore>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [<%=classify(name)%>Home],
+      declarations: [<%=classify(name)%>Fakestore],
       imports: [FormsModule, HttpClientTestingModule, RouterTestingModule],
       providers: [<%=classify(name)%>Service]
     })
@@ -19,7 +19,7 @@ describe('<%=classify(name)%>Home', () => {
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(<%=classify(name)%>About);
+    fixture = TestBed.createComponent(<%=classify(name)%>Fakestore);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

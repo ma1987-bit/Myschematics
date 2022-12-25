@@ -1,0 +1,26 @@
+import {Component,OnInit} from '@angular/core';
+import { <%= classify(name) %>Service } from '../<%=dasherize(name)%>.service';
+
+export interface ApiOptions {
+  id: number;
+  title:string,
+  price:number,
+  description:string,
+  image:string
+}
+
+
+@Component({
+  selector: '<%= dasherize(name)%>fakestore',
+  styleUrls: ['./<%= dasherize(name) %>-fakestore.component.css'],
+  templateUrl: './<%= dasherize(name) %>-fakestore.component.html',
+})
+export class  <%= classify(name) %>Fakestore implements OnInit {
+ public fields:ApiOptions[] = [];
+  constructor(private <%= dasherize(name) %>service :<%= classify(name) %>Service){}
+
+  ngOnInit(): void{
+   this.<%= dasherize(name)%>service.getFakedata().subscribe((data:ApiOptions[])=> this.fields = data);
+  }
+  
+}

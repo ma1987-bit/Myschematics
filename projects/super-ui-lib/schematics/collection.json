@@ -66,15 +66,20 @@
       "factory": "./fakestore-api-schematics/index#myService",
       "schema": "./fakestore-api-schematics/schema.json"
     },
-    "application-layout": {
+    "menu-schematics": {
       "description": "creating application foundation",
-      "factory": "./application-layout/index#myService",
-      "schema": "./application-layout/schema.json"
+      "factory": "./menu-schematics/index#myService",
+      "schema": "./menu-schematics/schema.json"
     },
     "angular-schematics": {
       "description": "creating default application",
       "factory": "./angular-schematics/index#default_1",
       "schema": "./angular-schematics/schema.json"
+    },
+    "sidenav-schematics": {
+      "description": "application come from fakestore api",
+      "factory": "./sidenav-schematics/index#myService",
+      "schema": "./sidenav-schematics/schema.json"
     }
   }
 }
