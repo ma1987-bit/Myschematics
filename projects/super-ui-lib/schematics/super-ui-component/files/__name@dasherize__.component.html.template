@@ -1,4 +1,2 @@
-<div class="container">
-<button type="button" class="button" (click)="clicked()">Click me!</button>
-    <span>{{message}}</span>
-    </div>
+
+<p><%= dasherize(name)%> works ! </p>

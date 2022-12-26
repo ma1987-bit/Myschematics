@@ -4,5 +4,5 @@ export interface ComponentOptions{
      path:string;
      project:string;
      enum:string;
-     multiselect:Array<string>
+    
  }

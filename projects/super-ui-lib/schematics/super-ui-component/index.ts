@@ -14,11 +14,6 @@ applyTemplates({
 move(normalize(`/${options.path}/${strings.dasherize(options.name)}`))
             ]
         )
-     
-
-
-       
-    
     return chain([
        
  externalSchematic(
@@ -27,8 +22,7 @@ mergeWith(templateSource,MergeStrategy.Overwrite)],
 
 
  )
- /*
- return chain([mergeWith(templateSource, MergeStrategy.Overwrite)]);*/
+ 
 
 }
 }
