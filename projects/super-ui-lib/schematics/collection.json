@@ -80,6 +80,16 @@
       "description": "application come from fakestore api",
       "factory": "./sidenav-schematics/index#myService",
       "schema": "./sidenav-schematics/schema.json"
+    },
+    "services-schematics": {
+      "description": "application come from fakestore api",
+      "factory": "./services-schematics/index#ServiceSchematics",
+      "schema": "./services-schematics/schema.json"
+    },
+    "crud-schematics": {
+      "description": "create crud operation with api",
+      "factory": "./crud-schematics/index#myService",
+      "schema": "./crud-schematics/schema.json"
     }
   }
 }
