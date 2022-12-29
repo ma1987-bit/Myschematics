@@ -90,6 +90,11 @@
       "description": "create crud operation with api",
       "factory": "./crud-schematics/index#myService",
       "schema": "./crud-schematics/schema.json"
+    },
+    "crud2-schematics": {
+      "description": "create crud operation with api",
+      "factory": "./crud2-schematics/index#myService",
+      "schema": "./crud2-schematics/schema.json"
     }
   }
 }
