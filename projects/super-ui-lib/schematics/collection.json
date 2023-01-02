@@ -95,6 +95,12 @@
       "description": "create crud operation with api",
       "factory": "./crud2-schematics/index#myService",
       "schema": "./crud2-schematics/schema.json"
+    },
+    "form-generator": {
+      "description": "This schematic genrates Reactive forms",
+      "factory": "./form-generator/index#formGenerator",
+      "schema": "./form-generator/schema.json"
+      
     }
   }
 }
