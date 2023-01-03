@@ -1,6 +1,5 @@
 import { Routes } from '@angular/router';
-import { <%= classify(name) %>Card } from './card/<%=dasherize(name)%>-card.component';
-import {<%= classify(name) %>About } from './about/<%=dasherize(name)%>-about.component';
+
 
 export const <%=name.toUpperCase()%>_ROUTES: Routes = [
   // hier komt routes
