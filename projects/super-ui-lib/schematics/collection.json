@@ -101,6 +101,12 @@
       "factory": "./form-generator/index#formGenerator",
       "schema": "./form-generator/schema.json"
       
+    },
+    "table-schematics": {
+      "description": "This schematic genrates table",
+      "factory": "./table-schematics/index#tableGenerator",
+      "schema": "./table-schematics/schema.json"
+      
     }
   }
 }
