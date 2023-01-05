@@ -7,7 +7,7 @@ import { of } from 'rxjs';
 
 @Component({
   selector: 'app-<%=dasherize(name)%>',
-  templateUrl:./'<%=dasherize(name)%>-edit.component.html',
+  templateUrl:'./<%=dasherize(name)%>-edit.component.html',
   styleUrls: ['./<%= dasherize(name) %>-edit.component.css']
 })
 export class <%=classify(name)%>EditComponent implements OnInit {
