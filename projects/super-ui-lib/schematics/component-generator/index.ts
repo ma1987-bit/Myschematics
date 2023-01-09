@@ -1,30 +1,28 @@
-import {
-  Rule,
-  url,
-  mergeWith,
-  apply,
-  applyTemplates,
-  move,
-  chain,
-  MergeStrategy,
-} from '@angular-devkit/schematics';
-import { ComponentOptions } from './schema';
-import { strings, normalize } from '@angular-devkit/core';
-export function ComponentGenerator(options: ComponentOptions): Rule {
-  return () => {
+import { Rule,url,mergeWith,apply,externalSchematic, applyTemplates,move, chain, MergeStrategy } from '@angular-devkit/schematics';
+import { SuperUIComponentSchema } from './super-ui-component';
+import {strings,normalize} from '@angular-devkit/core'
 
-    // hier create the template that comes from the files folder under this schematics 
-    const templateSource = apply(url(`./files/${options.type}`), [
-      applyTemplates({
-        classify: strings.classify,
-        dasherize: strings.dasherize,
-        name: options.type,
-      }),
+export function superUIComponent(options:SuperUIComponentSchema):Rule{
+    return()=>{
+        const templateSource = apply(
+            url('./files'),[
+applyTemplates({
+    classify: strings.classify,
+    dasherize: strings.dasherize,
+    name : options.name
+}),
+move(normalize(`/${options.path}/${strings.dasherize(options.name)}`))
+            ]
+        )
+    return chain([
+       
+ externalSchematic(
+'@schematics/angular','component',options),
+mergeWith(templateSource,MergeStrategy.Overwrite)],
 
-// the template will move to this path and it will take us name the name of type example(header,footer,card)
-      move(normalize(`/${options.path}/${strings.dasherize(options.type)}`)),
-    ]);
-// over write the template file
-    return chain([mergeWith(templateSource, MergeStrategy.Overwrite)]);
-  };
+
+ )
+ 
+
+}
 }

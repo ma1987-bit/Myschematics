@@ -1,39 +1,25 @@
 {
-  "$schema": "http://json-schema.org/schema",
-  "$id": "realdolmen",
-  "title": "Super UI library Component schema",
-  "type": "object",
-  "properties": {
-    "type":{
-      "description": "The type of Component",
-      "type":"string",
-      "enum": [
-        "header","card","footer"
-      ],
-      "default":"header",
-
-      "x-prompt":{
-        "message":"What type of component would you like to add",
-        "type":"list",
-        "uniqueItems": true,
-      "minItems": 1,
-        "list":[
-          {"value":"header","label":"header"},
-          {"value":"footer","label":"footer"},
-          {"value":"card","label":"card"}
-        ]
+    "$schema": "http://json-schema.org/schema",
+    "$id": "super-ui-component",
+    "title": "Super UI library Component schema",
+    "type": "object",
+    "properties": {
+      "name": {
+        "type": "string",
+      "$default": {
+        "$source": "argv",
+        "index": 0
       }
-    },
-    "path": {
-      "type": "string",
-      "format": "path",
-      "description": "Where should be created the file",
-      "x-prompt":"Where should be created the component ?",
-      "default":"src/app"
-    }
-   },
-  "required": [
-    "type",
-    "path"
-  ]
-}
+      },
+      "path": {
+        "type": "string",
+        "format": "path",
+        "description": "Where should be created the file",
+        "x-prompt":"Where should be created the component ?",
+        "default":"src/app"
+      }
+     },
+    "required": [
+      "name"
+    ]
+  }

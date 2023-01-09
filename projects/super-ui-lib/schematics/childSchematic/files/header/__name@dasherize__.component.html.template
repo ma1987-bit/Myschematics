@@ -1,7 +1,0 @@
-<div class="container">
-    <h1>
-    Hello this come from project library
-    </h1>
-  </div>
-  
-  <router-outlet></router-outlet>

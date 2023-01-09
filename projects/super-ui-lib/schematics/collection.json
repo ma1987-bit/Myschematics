@@ -5,84 +5,26 @@
       "description": "Add Super UI Library to the project",
       "factory": "./ng-add/index#ngAdd"
     },
-    "super-ui-component": {
-      "description": "This schematic genrates super component",
-      "factory": "./super-ui-component/index#superUIComponent",
-      "schema": "./super-ui-component/schema.json",
+    "component-generator": {
+      "description": "This schematic genrates pre defined componenten",
+      "factory": "./component-generator/index#superUIComponent",
+      "schema": "./component-generator/schema.json",
       "aliases": [
         "suc"
       ]
     },
-    "component-generator": {
-      "description": "with component.",
-      "factory": "./component-generator/index#ComponentGenerator",
-      "schema": "./component-generator/schema.json"
-    },
-    "run-schematic": {
-      "description": "collection of schematics",
-      "factory": "./run-schematic/index#myService",
-      "schema": "./run-schematic/schema.json"
-    },
-    "parentschematics": {
-      "description": "collection of schematics",
-      "factory": "./parentschematics/index#parentschematics",
-      "schema": "./parentschematics/schema.json"
-      
-     
-    },
-    "childSchematic": {
-      "description": "A blank schematic.",
-      "factory": "./childSchematic/index#childSchematic",
-      "schema": "./childSchematic/schema.json"
-
-      
-    }
-    ,
-    
-    "navbarcomponent": {
-      "description": "A blank schematic.",
-      "factory": "./formcomponent/index#formcomponent",
-      "schema": "./navbarcomponent/schema.json",
-      "aliases": ["f"]
-    },
-    "masterschematics": {
-      "description": "A blank schematic.",
-      "factory": "./masterschematics/index#masterschematics",
-      "schema": "./masterschematics/schema.json"
-      
-    },
-    "shop-schematic": {
-      "description": "Data come from model file",
-      "factory": "./shop-schematic/index#myService",
-      "schema": "./shop-schematic/schema.json"
-    },
-    "defaultapp": {
-      "description": "A blank schematic.",
-      "factory": "./defaultapp/index#DefaultApp",
-      "schema": "./defaultapp/schema.json"
-    },
-    "fakestore-api-schematics": {
-      "description": "application come from fakestore api",
-      "factory": "./fakestore-api-schematics/index#myService",
-      "schema": "./fakestore-api-schematics/schema.json"
-    },
     "menu-schematics": {
-      "description": "creating application foundation",
+      "description": "creating application menu-sidenav skeleton",
       "factory": "./menu-schematics/index#myService",
       "schema": "./menu-schematics/schema.json"
     },
-    "angular-schematics": {
-      "description": "creating default application",
-      "factory": "./angular-schematics/index#default_1",
-      "schema": "./angular-schematics/schema.json"
-    },
-    "sidenav-schematics": {
-      "description": "application come from fakestore api",
-      "factory": "./sidenav-schematics/index#myService",
-      "schema": "./sidenav-schematics/schema.json"
+    "bootstrap-sidenav": {
+      "description": "creating application foundation",
+      "factory": "./bootstrap-sidenav/index#myService",
+      "schema": "./bootstrap-sidenav/schema.json"
     },
     "services-schematics": {
-      "description": "application come from fakestore api",
+      "description": "creating service",
       "factory": "./services-schematics/index#ServiceSchematics",
       "schema": "./services-schematics/schema.json"
     },
