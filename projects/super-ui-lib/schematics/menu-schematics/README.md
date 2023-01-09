@@ -35,7 +35,7 @@ Run `ng g super-ui-lib:menu-schematics` to generate a new menu and sidenav in yo
         "submenu4": "submenu4"}
         ]
     }
-    ```
+```
 The generator is using a json5 parser. This means that you can use comments, omit quotation marks, and use trailing commas. 
 
 3. In your project's root directory, run the following Angular CLI based command:
