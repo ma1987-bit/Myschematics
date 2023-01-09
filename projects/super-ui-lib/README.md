@@ -4,9 +4,6 @@ This library was generated with [Angular CLI](https://github.com/angular/angular
 ## Development server
 
  for a dev server. Navigate to `http://localhost:4873/`. The application will automatically reload if you change any of the source files.
-<div>
-  <p><img src="https://imgur.com/SiimNUv" alt="Scaffold files for verdaccio" width="800"></p>
-</div>
 
 ## Build
 
