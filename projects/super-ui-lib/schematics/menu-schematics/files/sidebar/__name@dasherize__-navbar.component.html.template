@@ -52,8 +52,8 @@
               <mat-expansion-panel-header>
                   <%=model.headmenutitle2%>
               </mat-expansion-panel-header>
-               <% for (let menu of model.headmenu2) { %>
-              <mat-nav-list>
+               
+              <mat-nav-list><% for (let menu of model.headmenu2) { %>
                   <a mat-list-item routerLink=""><%=menu.submenu1%></a>
                   <a mat-list-item routerLink=""><%=menu.submenu2%></a>
                   <a mat-list-item routerLink="#"><%=menu.submenu3%></a>
