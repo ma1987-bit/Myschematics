@@ -1,7 +1,7 @@
 export interface CrudModel {
   title: string;
   entity: string;
-  api: CrudEndpoints;
+  apiEindpoint: string;
   filter: string[];
   fields: Field[];
 }

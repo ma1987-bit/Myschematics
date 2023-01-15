@@ -9,7 +9,7 @@ const headers = new HttpHeaders().set('Accept', 'application/json');
 @Injectable()
 export class <%= classify(name) %>Service {
   <%=camelize(name)%>List: <%=classify(name)%>[] = [];<% const id = getId(model); %>
-  api = '<%= model.api.url %>';
+  api = 'http://www.angular.at/api/<%= model.apiEindpoint %>';
 
   constructor(private http: HttpClient) {
   }
