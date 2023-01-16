@@ -1,9 +1,8 @@
-# Ng-add 
+# Ng-update 
 
-Adding library Module to the app, if you run this schematics in your application it will install the super-ui-lib.
-And it will update app.module file in your application.
+Configure your library to automatically be upgraded when a user runs the ng update command.
 <div>
-<p><img src="https://imgur.com/f7BgLC2.png" alt="Scaffold files for CRUD" width="800"></p>
+<p><img src="https://imgur.com/8z1wkiq.png" alt="Scaffold files for ng update" width="800"></p>
 </div>
 
 ## Development server
@@ -15,7 +14,8 @@ for a dev server. Navigate to `http://localhost:4873/`. The application will aut
 
 ## Tutorial: Getting Started
 
- 1. Install super-ui-lib to your application `ng add super-ui-lib` if you install it from local registery (verdaccio) `ng add super-ui-lib --registery http://localhost:4873/ `
+ 1. Install super-ui-lib to your application `ng add super-ui-lib` if you install it from local registery (verdaccio) `ng add super-ui-lib --registery http://localhost:4873/ `and after that
+Run `ng update super-ui-lib` to update your library to the last version to avoid any breaking changes.
 
 
 ## Build
@@ -39,11 +39,9 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 
 Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
-## Further help 
+## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 
-For more information about how ng add schematics works : https://angular.io/guide/schematics
-https://www.youtube.com/watch?v=MVqVBbM_gvw
+For more information about how ng update schematics works : https://timdeschryver.dev/blog/ng-update-the-setup
 https://github.com/angular/angular-cli/tree/main/packages/schematics/angular
- 

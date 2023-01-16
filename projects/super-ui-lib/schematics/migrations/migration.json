@@ -1,9 +1,9 @@
 {
     "schematics": {
-      "migration-04": {
-        "version": "4.0.0",
-        "description": "Updates super-ui-lib from v3.1.0 to v4.0.0",
-        "factory": "./update-4"
+      "migration-03": {
+        "version": "3.1.64",
+        "description": "Updates super-ui-lib from v3.1.62 to v3.1.64",
+        "factory": "./3_1_64/index"
       }
     }
   }
