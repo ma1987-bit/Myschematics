@@ -13,6 +13,11 @@
         "suc"
       ]
     },
+    "componenttest": {
+      "description": "This schematic genrates pre defined componenten",
+      "factory": "./componenttest/index#lintSchematic",
+      "schema": "./componenttest/schema.json"
+    },
     "menu-schematics": {
       "description": "creating application menu-sidenav skeleton",
       "factory": "./menu-schematics/index#myService",
