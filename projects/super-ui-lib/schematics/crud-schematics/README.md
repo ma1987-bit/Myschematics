@@ -18,9 +18,7 @@ Run `ng g super-ui-lib:crud-schematics` to generate crud opertion in your applic
     { 
     "title": "Hotel",
     "entity": "hotel",
-    "api": {
-      "url": "http://www.angular.at/api/hotel"
-    },
+    "apiEindpoint":"hotel",
     "filter": [
       "city"
     ],

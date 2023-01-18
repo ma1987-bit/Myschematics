@@ -18,9 +18,7 @@ Run `ng g super-ui-lib:crud2-schematics` to generate crud opertion in your appli
     {
     "title": "Flight",
     "entity": "flight",
-    "api": {
-      "url": "http://www.angular.at/api/flight"
-    },
+    "apiEindpoint":"flight",
     "filter": [
       "from",
       "to"
