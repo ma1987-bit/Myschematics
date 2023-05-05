@@ -2,7 +2,7 @@ import { Rule,url,mergeWith,apply,externalSchematic, applyTemplates,move, chain,
 import { SuperUIComponentSchema } from './super-ui-component';
 import {strings,normalize} from '@angular-devkit/core'
 
-export function superUIComponent(options:SuperUIComponentSchema):Rule{
+export function formGenerator(options:SuperUIComponentSchema):Rule{
     return()=>{
         const templateSource = apply(
             url('./files'),[

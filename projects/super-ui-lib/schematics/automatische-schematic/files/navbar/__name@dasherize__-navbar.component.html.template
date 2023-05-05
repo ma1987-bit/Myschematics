@@ -1,8 +1,0 @@
-
-<% for (let menu of model.menuItem) { %>
-<ul>
-  <li><a class="active" routerLink="<%=dasherize(name)%>card" routerLinkActive="active"><%=menu.home%></a></li>
-  <li><a routerLink="<%=dasherize(name)%>about"><%=menu.about%></a></li>
-</ul>
- <% } %>
-

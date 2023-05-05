@@ -1,6 +1,6 @@
 {
   "name": "super-ui-lib",
-  "version": "2.1.21",
+  "version": "3.1.69",
   "scripts": {
     "build":"tsc -p tsconfig.schematics.json",
     "build:watch": "tsc -p tsconfig.schematics.json --watch", 
@@ -18,6 +18,9 @@
   },
   "ng-add":{
     "save": "true"
+    },
+    "ng-update": {
+      "migrations": "./schematics/migrations/migration.json"
     },
    
   "dependencies": {
